@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Student Hub | Portfolio</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/portfolio.css" />
+  <script defer src="./js/main.js"></script>
+
+  <style>
+    /* Button styling */
+    .download-btn {
+      background-color: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      padding: 12px 32px;
+      margin: 20px 0;
+      font-size: 1.15rem;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(25, 118, 210, 0.17);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .download-btn:hover {
+      background-color: #1257a4;
+      box-shadow: 0 4px 16px rgba(18, 87, 164, 0.22);
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  
+  <!-- Sidebar -->
+  <div id="side-menu" class="side-menu">
+    <button class="close-btn" id="close-menu">&times;</button>
+    <a href="#" id="menu-faculty-approvals">Faculty Approvals</a>
+    <a href="#" id="menu-academics">Academics</a>
+    <a href="#" id="menu-non-academics">Non-Academics</a>
+    <a href="#" id="menu-certifications">Certifications</a>
+    <a href="#" id="menu-internships">Internships</a>
+    <a href="#" id="menu-workshops">Workshops</a>
+    <a href="#" id="menu-club-activities">Club Activities</a>
+  </div>
+
+  <section class="main-content">
+    <button id="download-portfolio-btn" class="download-btn">&#8681; Download Portfolio (PDF)</button>
+
+    <div id="portfolio-content">
+      <h1>Welcome, <span id="username-welcome"></span>!</h1>
+      <h1>Your Verified Portfolio</h1>
+      <div class="portfolio-grid">
+        <div class="portfolio-box student-details full-width">
+          <h2>Student Information</h2>
+          <ul>
+            <li><strong>Name:</strong> <span id="username-portfolio"></span></li>
+            <li><strong>Age:</strong> 21</li>
+            <li><strong>Branch:</strong> Computer Science & Engineering</li>
+            <li><strong>Academic Year:</strong> 3rd Year</li>
+          </ul>
+        </div>
+        <div class="portfolio-box">
+          <h2>Academic Achievements</h2>
+          <ul>
+            <li>Bachelor of Technology - CGPA: 8.5 (Ongoing)</li>
+            <li>AI and Machine Learning Certification</li>
+            <li>Completed "Python for Everybody" Coursera MOOC</li>
+          </ul>
+        </div>
+        <div class="portfolio-box">
+          <h2>Internships</h2>
+          <ul>
+            <li>Software Developer Intern - XYZ Tech Pvt Ltd (Jun-Aug 2025)</li>
+            <li>Research Intern - AI Lab, National University (Summer 2024)</li>
+          </ul>
+        </div>
+        <div class="portfolio-box">
+          <h2>Certifications</h2>
+          <ul>
+            <li><a href="#">Python Certification</a></li>
+            <li><a href="#">AWS Fundamentals</a></li>
+            <li><a href="#">Web Development Bootcamp</a></li>
+          </ul>
+        </div>
+        <div class="portfolio-box">
+          <h2>Other Activities</h2>
+          <ul>
+            <li>Volunteer - Coding Club Hackathon 2025</li>
+            <li>Organized Tech Talk Series</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Example username filling (replace with your logic)
+    document.getElementById('username-welcome').textContent = localStorage.getItem('username') || 'Student';
+    document.getElementById('username-portfolio').textContent = localStorage.getItem('username') || 'Student';
+
+    // Download portfolio as PDF
+    document.getElementById('download-portfolio-btn').addEventListener('click', function() {
+      html2pdf().set({
+        margin: 0.5,
+        filename: 'portfolio.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      }).from(document.getElementById('portfolio-content')).save();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+.login-container {
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 18px #c6decf;
+  width: 360px;
+  text-align: center;
+  margin: 8vh auto;
+}
+
+.portal-selection {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.portal-button {
+  background: #6fcf97;
+  border: none;
+  color: white;
+  padding: 0.5rem 2.1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.25s ease;
+}
+
+.portal-button:hover {
+  background: #4cae69;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 0.62rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1.8px solid #a1c6b9;
+  outline: none;
+  transition: border-color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  border-color: #3c9a54;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #6fcf97;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.62rem 0;
+  margin-bottom: 1.2rem;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #4cae69;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.create-account {
+  background-color: #6fcf97;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.62rem 1.7rem;
+}
+
+.cancel {
+  background-color: #c0c4c9;
+  color: #24292f;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.62rem 1.4rem;
+}
+/* Container to horizontally align all three elements */
+.action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style for the "New User?" text */
+.new-user-text {
+  color: #2e7d32; /* Green similar to portal buttons */
+  font-weight: 500;
+  font-size: 1rem;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Create Account button styling */
+.create-account-btn {
+  background-color: #6fcf97; /* Light green */
+  color: white;
+  padding: 0.6rem 1.75rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.25s ease;
+}
+
+.create-account-btn:hover {
+  background-color: #4cae69; /* Darker green on hover */
+}
+
+/* Cancel button styling */
+.cancel-btn {
+  background-color: #f5f4f4; /* Soft gray */
+  color: #24292f; /* Dark text */
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.25s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #a9abb1; /* Slightly darker gray on hover */
+}

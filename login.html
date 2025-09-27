@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Student Hub | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+  <script defer src="./js/main.js"></script>
+  <script defer src="./js/login.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="nav-placeholder">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <span class="logo">Smart Student Hub</span>
+      </div>
+      <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="login.html" class="active">Login / Sign In</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Login container -->
+  <div class="login-container">
+    <h1>Login</h1>
+    <div class="portal-selection">
+      <button class="portal-button" data-role="student">Student Portal</button>
+      <button class="portal-button" data-role="faculty">Faculty Portal</button>
+    </div>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" autocomplete="off" required />
+      <input type="password" id="password" placeholder="Password" autocomplete="off" required />
+      <button type="submit">Sign In</button>
+    </form>
+
+    <div class="action-row">
+      <button id="btn-create-account" class="create-account-btn">Create Account</button>
+      <button id="btn-cancel" class="cancel-btn">Cancel</button>
+    </div>
+
+    <div id="welcome-msg" class="welcome-msg"></div>
+  </div>
+</body>
+</html>
